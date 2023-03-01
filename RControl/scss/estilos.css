@@ -1,0 +1,59 @@
+html {
+  font-size: 15px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #111111; }
+
+.encabezado {
+  background: #111111;
+  color: white;
+  padding: .5rem 0; }
+
+.encabezado .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.encabezado .logo img {
+  width: 50px;
+  height: auto; }
+
+.boton-buscar, .boton-menu {
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.5rem;
+  background: transparent;
+  color: #fff; }
+
+.boton-buscar:focus, .boton-menu:focus {
+  outline: 0; }
+
+.boton-buscar {
+  margin-left: auto;
+  margin-right: 0.8rem; }
+
+/*Estilos buscar*/
+#bloque-buscar {
+  flex: 1 1 100%; }
+
+.contenedor-bloque-buscar {
+  display: flex;
+  height: 3rem;
+  margin: 1rem 0; }
+
+.contenedor-bloque-buscar input[type="text"] {
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  padding: 1rem; }
+
+.contenedor-bloque-buscar input[type="submit"] {
+  flex: 1 1 auto;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  padding: 1rem;
+  background: #12AFAF;
+  color: #fff; }
+
+/*# sourceMappingURL=estilos.css.map */

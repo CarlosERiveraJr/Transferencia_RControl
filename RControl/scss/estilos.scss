@@ -1,0 +1,301 @@
+//---------------------
+//Patrones de colores
+//---------------------
+
+$texto: #111111;
+$principal: #12AFAF;
+$secundario: #009500;
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}  
+.bienvenidos{
+    background: url("../images/computer-22.jpg") no-repeat center top;
+    color: #fff;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado{
+    background: $texto;
+    color: white;
+    padding: .5rem 0;
+}
+.encabezado .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.encabezado .logo img{
+    width: 200px;
+    height: auto;
+    ba
+}
+//Estilos para los botones buscar y menu
+
+.boton-buscar, .boton-menu{
+    border: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.5rem;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.boton-buscar:focus, .boton-menu:focus{
+    
+}
+.boton-buscar:hover, .boton-menu:hover{
+    color: $principal;
+}
+.boton-buscar {
+    margin-left: auto;
+    margin-right: 0.8rem;
+}
+
+/*Estilos buscar*/
+#bloque-buscar {
+    flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar{
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"]{
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+}
+
+.contenedor-bloque-buscar input[type="submit"]{
+    flex: 1 1 auto;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    padding: 1rem;
+    background: $principal;
+    color: #fff;
+}
+
+#menu-principal{
+    flex: 1 1 100%;
+}
+#menu-principal ul{
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+
+#menu-principal ul a{
+   display: block;
+    padding: 0.8rem 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    border-top: 1px solid #716464;
+    text-decoration: none;
+}
+
+#menu-principal ul a:hover,#menu-principal ul li.active a{
+    color: $principal ;
+}
+
+.texto-encabezado{
+   flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+.texto-encabezado .display-3{
+    margin-top: 2rem;
+}
+.texto-encabezado p{
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: transparent;
+    margin-top: 2rem;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover,
+.btn-primary:visited{
+    color: #fff;
+    background-color: $secundario;
+    border-color: transparent;
+}
+
+.flecha-bajar a{
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    animation: flecha-animada 1s ease-in-out infinite;
+} 
+
+@keyframes flecha-animada{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(6px)
+    }
+    from{
+        transform: translateY(0);
+    }
+}
+
+//-------------------------------------------------
+//   SECCION AGENCIA
+//-------------------------------------------------
+
+.agencia{
+    background: $principal;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+//-----------------------------------------------
+//SECCION TU MEJOR ELECCION
+//-----------------------------------------------
+
+.tu_mejor_eleccion{
+    padding-top: 1rem; 
+}
+.tu_mejor_eleccion h2 span{
+    color: $principal;
+}
+
+.tu_mejor_eleccion ul{
+   list-style-type: none;    
+}
+
+.tu_mejor_eleccion ul li .fa{   
+   font-size: 2.3rem;
+    background: $secundario;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    color: #fff;
+}
+.tu_mejor_eleccion ul li .eleccion h4{   
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+.tu_mejor_eleccion ul li{   
+    min-height: 9rem;
+}
+
+//-------------------------------
+// Empiezan Medias Queries
+//-------------------------------
+
+@media(min-width:1200px){
+    #menu-principal{
+        height: auto !important;
+        display: block;
+        flex: 0 1 auto;
+        margin-left: auto;
+        order: 1;
+    }
+    
+    #menu-principal ul{
+      display: flex;
+        margin: 0 0 0 0;
+    }
+    
+    #menu-principal ul li a {
+       padding: .8rem;
+        padding-right: .2;
+        text-transform: capitalize;
+        margin: 0 .3rem;
+        border-top: 0px;
+        border-bottom: 4px solid transparent;
+        transition: all .5s ease;
+        
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover{
+       color: $principal;
+        border-bottom: 4px solid;
+    }
+    .boton-buscar{
+        margin-left: 1rem;
+        margin-right: 0;
+        order: 2; 
+    } 
+    
+    #bloque-buscar{
+        order: 3;
+        position: absolute;
+        width: 30rem;
+        right: 6rem;
+        top: 2.8rem;
+        transition: all .5s ease;
+        
+    }
+    
+}
+
+.servicios article .fa{   
+   font-size: 2.3rem;
+    background: #1e8cd1;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    color: #fff;
+    flex: 0 0 4.7rem;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.servicios article{ 
+    display: flex;
+    align-items: center;
+    margin: 1rem0;
+}
+
+.servicios h3{
+    margin: 0;
+    font-size: 1.1rem;
+    flex: 1 1 auto;
+} 
+.servicios h3 a{
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+} 
+.servicios h3 a::after{ 
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    left: 0;
+    transition: all .5s ease;
+}
+
+.servicios h3 a:hover::after{ 
+    left: -.5rem;
+    opacity: 1;
+    color: aqua;
+}
